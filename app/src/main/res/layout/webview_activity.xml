@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:minHeight="?attr/actionBarSize"
+        android:background="#0a000000"
+        android:layout_margin="5dp"
+        app:layout_scrollFlags="scroll|enterAlways">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/layout"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:id="@+id/search_bt"
+                android:backgroundTint="#000000"
+                android:background="@android:drawable/ic_menu_search"/>
+            <EditText
+                android:layout_width="380dp"
+                android:layout_height="50dp"
+                android:imeOptions="actionSearch"
+                android:inputType="textUri"
+                android:id="@+id/url_et"
+                android:layout_gravity="center"
+                android:layout_toLeftOf="@+id/search_bt"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="5dp"
+                android:textColor="#000000"
+                android:singleLine="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"/>
+            <!--android:cursorVisible="true"-->
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:max="100"
+                android:progress="0"
+                android:layout_alignParentBottom="true"
+                android:layout_alignRight="@id/search_bt"/>
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/webView"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>
