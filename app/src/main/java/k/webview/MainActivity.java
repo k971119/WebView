@@ -177,7 +177,7 @@ public class MainActivity extends AppCompatActivity{
             }
         }
     }
-    private void ToatShow(String msg){
+    private void ToastShow(String msg){
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
 
